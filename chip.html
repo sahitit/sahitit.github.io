@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chip Chase - Learn More</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Chip Chase Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Chip Chase</a>
+        </header>
+
+        <!-- Chip Chase Main Content -->
+        <div id="main">
+            <article class="post featured">
+                <header class="major">
+                    <h2>Chip Chase</h2>
+                    <p>Discover how Chip Chase navigates an obstacle-filled environment to reach its goal using a series of predefined actions. Learn about the robot’s movement, interactions with the environment, and how it collects keys to unlock doors.</p>
+                </header>
+                <a href="#" class="image main" style="display: flex; justify-content: center;">
+                    <img src="images/chips.png" alt="Chip Chase Logo" style="width: 600px; height: auto;" />
+                </a>
+            </article>
+
+            <!-- Table of Contents -->
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#robot-navigation">How the Robot Navigates</a></li>
+                <li><a href="#robot-actions">Robot Actions</a></li>
+                <li><a href="#environment-interactions">Environment Interactions</a></li>
+                <li><a href="#learn-more">Learn More (View Map)</a></li>
+            </ul>
+
+            <!-- Robot Navigation -->
+            <section id="robot-navigation">
+                <h3>How the Robot Navigates</h3>
+                <p>The robot navigates through its environment to collect keys and reach the goal, avoiding obstacles like water, walls, and other obstructions. It opens doors when it has the necessary keys and continues its path until it completes the task.</p>
+            </section>
+
+            <!-- Robot Actions -->
+            <section id="robot-actions">
+                <h3>Robot Actions</h3>
+                <ul>
+                    <li><strong>MOVE_RIGHT</strong> - Move the robot one step to the right.</li>
+                    <li><strong>MOVE_LEFT</strong> - Move the robot one step to the left.</li>
+                    <li><strong>MOVE_UP</strong> - Move the robot one step up.</li>
+                    <li><strong>MOVE_DOWN</strong> - Move the robot one step down.</li>
+                    <li><strong>DO_NOTHING</strong> - Keep the robot in its current position.</li>
+                </ul>
+            </section>
+
+            <!-- Environment Interactions -->
+            <section id="environment-interactions">
+                <h3>Environment Interactions</h3>
+                <p>The robot interacts with various environment tiles, such as walls, doors, keys, water, and the goal position. These interactions determine how the robot moves and how it picks up keys or unlocks doors.</p>
+            </section>   
+            
+            <section id="development-process">
+                <h3>Development Process</h3>
+                <p>
+                    The development of this simulation was centered around creating an efficient and dynamic environment for a robot to navigate using Manhattan distance for pathfinding. The primary objective was to enable the robot to calculate the shortest possible path by evaluating only horizontal and vertical distances between its current position and the goal. This approach helped optimize the robot's movement within the grid-like environment, ensuring it could quickly and accurately reach its target.
+                </p>
+                <p>
+                    Priority queues played a crucial role in the decision-making process, enabling the robot to search for the most optimal path towards the nearest goal. By organizing potential paths based on priority, the robot was able to make intelligent decisions, selecting the most efficient route towards its objectives. This method allowed for faster calculations and improved the robot's overall performance in real-time simulations.
+                </p>
+                <p>
+                    To visualize the robot's movement and its interaction with the environment, visuals were sourced from the Chip's Challenge Game website. These provided a clear and engaging representation of the robot's path and its surroundings. The visual integration was essential for providing users with a better understanding of the robot's decision-making process, making it easier to track its movements and actions in the simulation.
+                </p>
+                <p>
+                    The robot’s decision-making process was governed by a closest-item-first strategy, where it prioritized the nearest goal, whether it was a key or a chip. By focusing on the closest objective, the robot avoided unnecessary detours, ensuring that it moved efficiently across the environment. This strategy was implemented in the form of a search algorithm, which dynamically evaluated the robot's options and made real-time adjustments based on the layout of the environment.
+                </p>
+                <p>
+                    Overall, the development process involved a combination of search algorithms, visualizations, and intelligent decision-making strategies to create a functional and engaging robot simulation. These elements worked together to provide a seamless and efficient experience, where the robot could autonomously navigate and complete its tasks in an optimized manner.
+                </p>
+            </section>
+            
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/yourprofile/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/yourgithub" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul><li>&copy; 2024 Chip Chase</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Show the map and details when "Learn More" is clicked
+        document.getElementById('view-map').onclick = function() {
+            document.getElementById('map-image').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight); // Scroll to the bottom
+        }
+    </script>
+
+</body>
+</html>
